@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Resume</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    div.a {
+      text-align: center;
+      color: aqua;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      text-decoration: underline;
+      text-shadow: 1.5px 1.5px;
+    }
+    div.b {
+        color: beige;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+    }
+    div.c {
+  text-align: center;
+  padding: 4%;
+    }
+    div.d {
+    overflow: overlay;
+  text-align:center;
+  color: lemonchiffon;
+  font-size: large;
+  text-shadow: 2px 2px;
+}
+div.e {
+  color: lightpink;
+}
+div.f {
+  text-align: center;
+  color: black;
+}
+div.g {
+  padding: 10%;
+  color: aquamarine;
+  text-align: center;
+}
+
+.accordion {
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: #008CBA;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  transition: 0.4s;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.active, .accordion:hover {
+  background-color: rgb(196, 219, 166); 
+} 
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: navy;
+  overflow: overlay;
+}
+
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#yourDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+}
+ .container {
+      position: relative;
+      width: 50%;
+    }
+
+    .Image {
+      width: 200px;
+      height: 200px;
+    }
+
+    .image {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 200px;
+      width: 200px;
+      margin: auto;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: #008CBA;
+    }
+
+    .Image:hover .overlay {
+      opacity: 1;
+    }
+
+    .text {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+body::before {content: "";
+height:300%;
+width:100%;
+position:absolute;
+background:url("New folder/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg") no-repeat center center/cover;
+background-attachment: fixed;
+z-index:-1;
+/* margin: 0px; */
+ }
+.tab {
+  overflow: overlay;
+  border: 1px solid #ccc;
+  background-color: #f1f1;
+  text-align:center;
+  text-shadow: 1.5px 1.5px;
+  
+}
+
+.tab button {
+  background-color: inherit;
+  border: outset;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 25px;
+  font-family: cursive;
+  color: greenyellow;
+}
+
+.tab button.active {
+  background-color: grey;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid grey;
+  border-top: ridge;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 60px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-instagram {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-github {
+  background: #007bb5;
+  color: white;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 16px 16px 16px 24px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+p {
+    color: rgb(240, 220, 196);
+    font-size: 23px;
+    text-indent: 15%;
+}
+h1 {
+    color: blanchedalmond;
+    font-family: monospace;
+    text-shadow: 1.5px 1.5px;
+    text-align: left;
+    font-size: 38px;
+}
+h2 {
+    text-decoration: underline;
+    font-family: sans-serif;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+  </style>
+</head>
+
+<body>
+  <center>
+    <div class="container">
+      <div class="Image">
+        <img src="New folder/1644501040482.jpg" class="image">
+        <div class="overlay">
+          <h1 class="text">HELLO!!!</h1>
+        </div>
+      </div>
+    </div>
+  </center>
+  <div class="a">
+    <h2>I AM CHIRASREE ROY</h2>
+  </div>
+
+
+  <h1>"WHO AM I"</h1>
+  <p><i>I am a cheerful and determined individual currently pursuing Btech in Electronics and Communication Engineering from St. Thomas' College of Engineering and Technology.I am totally flexible and can adjust myself well in any environment.Besides being a strong believer of teamwork and optimisim, I am reliable and open to criticism.I know when tto be a leader and when to be a listener. I have a keen interest in learning new things.So, if I am required to learn a new skillset ,I have the ability to dedicate myself fully into  it  and deliver to the best of my abilities.</i></p>
+      <p><i>With each passing day,I aspire to be a more improved and better version of myself tomorrow than what I was yesterday.</i></p>
+
+
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Academic Credentials')">ACADEMIC CREDENTIALS</button>
+    <button class="tablinks" onclick="openCity(event, 'Areas Of Interest')">AREAS OF INTEREST</button>
+    <button class="tablinks" onclick="openCity(event, 'Awards')">AWARDS</button>
+   </div>
+   
+   <div id="Academic Credentials" class="tabcontent">
+     <p>
+         <ul>
+           <div class="e">
+             <li><h2>Bachelor in Technology</h2></li>
+             </div>
+             <ul>
+                 <div class="b">
+                 <li><b><span>College-</span>  St. Thomas' College of Engineering and Technology</b></li>
+                 <li><b><span>Stream-</span>  Electronics and Communication Engineering</b></li>
+                 <li><b><span>Span-</span>  2019-2023</b></li>
+                 </div>
+             </ul>
+         </ul>
+         <ul>
+           <div class="e">
+             <li><h2>All India Senior School Certificate Examination</h2></li>
+             </div>
+             <ul>
+                 <div class="b">
+                 <li><b><span>School-</span>  South Point High School</b></li>
+                 <li><b><span>Span-</span>  2016-2018</b></li>
+                 </div>
+             </ul>
+         </ul>
+         <ul>
+           <div class="e">
+             <li><h2>Madhyamik Examination</h2></li>
+             </div>
+             <ul>
+                 <div class="b">
+                 <li><b><span>Scool-</span>  South Point High School</b></li>
+                 <li><b><span>Span-</span>  2003-2016</b></li>
+                 </div>
+             </ul>
+         </ul>
+     </p>
+   </div>
+   
+   <div id="Areas Of Interest" class="tabcontent">
+     <p>
+         <ul>
+             <div class="b">
+                 <li><b>Basics Of C Programming</b></li>
+                 <li><b>Data Structures And Algorithm</b></li>
+                 <li><b>Basics Of Python</b></li>
+                 <li><b>HTML</b></li>
+                 <li><b>CSS</b></li>
+                 <li><b>JAVASCRIPT</b></li>
+                 <li><b>Digital System Design</b></li>
+                 <li><b>Microprocessor And Micro-Controllers</b></li>
+             </div>
+         </ul>
+     </p> 
+   </div>
+   
+   <div id="Awards" class="tabcontent">
+     <p>
+         <ol>
+             <div class="b">
+                <li><b>Received an honorable mention as the Judge for Poetry Out Loud in NOVUS’20 organized by Rotaract club of Saltlake Midtown (September, 2020).</b></li>
+                 <li><b>Claimed Top 10 position in the Speak-A-Thon competition of RENERGIZE organized by Furenergygrid (August, 2020)</b></li>
+                 <li><b>Claimed Top 10 position in the Storyo competition of RENERGIZE organized by Furenergygrid (August, 2020)</b></li>
+                 <li><b>Acquired 1st, 2nd and 3rd positions in four events at the Annual Sports Event in St. Thomas’ College Of Engineering And Technology (February, 2020)</b></li>
+
+             </div>
+         </ol>
+     </p>
+   </div>
+
+
+   <div class="c">
+    <button onclick="myFunction()">CO CURRICULAR ACTIVITIES</button>
+    <button onclick="yourFunction()">EXTRA CURRICULAR ACTIVITIES</button>
+    </div>
+    <div id="myDIV">
+    <ul>
+        <li><b>Undergone training in 'Python:Basics And Beyond' by Nullstack Technologies (December, 2021-January, 2022).</b></li>
+        <li><b>Participated in a Workshop on 'Machine Learning And Data Analytics' organized by St. Thomas' College of Engineering And Technology (September, 2021).</b></li>
+        <li><b>Participated in a Summer Workshop on ‘Embedded Systems And IOT’ organized by St. Thomas' College of Engineering And Technology (August, 2021).</b></li>
+        <li><b>Participated in a Webinar on ‘World No Tobacco Day’ organized by the Red Ribbon Club(NSS Cell) (June, 2021).</b></li>
+        <li><b>Participated in a Webinar on 'Innovations in Internet Of Things' organized by St. Thomas' College of Engineering And Technology (May, 2021).</b></li>
+        <li><b>Participated in Photography and Video making organized by the National Service Scheme(NSS) Cell on the occasion of World Earth Day (April, 2021).</b></li>
+        
+    </ul>
+    </div>
+    
+    <div id="yourDIV">
+        <ul>
+            <li><b>Member of the departmental team in the Badminton Tournament at St. Thomas’ College of Engineering & Technology (February, 2020).</b></li>
+            <li><b>Member of the organizing and participating team in the departmental ‘Independence Day Celebration’ at St. Thomas’ College of Engineering And Technology (August, 2019).</b></li>
+        </ul>
+    </div>
+
+    <div class="d">
+      <h2>PERSONAL DETAILS</h2>
+      </div>
+      
+      <button class="accordion">DATE OF BIRTH</button>
+      <div class="panel">
+        <p><b><i>3rd November, 1999</i></b></p>
+      </div>
+      
+      <button class="accordion">ADDRESS</button>
+      <div class="panel">
+       <p><b><i>54/56/2/1 KNC Lane, Shibpur, Howrah-711102</i></b></p>
+      </div>
+      
+      <button class="accordion">MY HOBBIES</button>
+      <div class="panel">
+        <p><b><i>Running, Playing outdoor and indoor games, Recitation, Dancing, Story writing, Creative writing, Crafting, Petting dogs and cats</i></b></p>
+      </div>
+      
+      <button class="accordion">LANGUAGES KNOWN</button>
+      <div class="panel">
+        <p><b><i>ENGLISH, BENGALI, HINDI</i></b></p>
+      </div>
+      <div class="a">
+      <h2>CONTACT INFORMATION</h2>
+      </div>
+      <div class="f">
+      <p>Mobile No.- 9163220446</p>
+      <p>
+        Email Id-<a href="mailto:roychirasree14@gmail.com">roychirasree14@gmail.com</a>
+      </p>
+      </div>
+
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <p><p><a href="https://www.facebook.com/chirasreeroy14" class="fa fa-facebook"></a></p></p>
+        <p><p><a href="https://instagram.com/yo_chiru_19?utm_medium=copy_link" class="fa fa-instagram"></a></p></p>
+        <p><p><a href="https://www.linkedin.com/in/chirasree-roy-9535ba207" class="fa fa-linkedin"></a></p></p>
+        <p><p><a href="https://github.com/ChirasreeRoy" class="fa fa-github"></a></p></p>
+        
+      </div>
+      <div class="g">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Social Media</span>
+      </div>
+      
+   <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+
+    function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function yourFunction() {
+  var x = document.getElementById("yourDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+
+  </script>
+</body>
+
+</html>
